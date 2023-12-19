@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/home/Home';
+import Employees from './components/employees/Employees';
+import About from './components/about/About';
+import NavbarHeader from './components/navbar/Navbar';
+import Nomatch from './components/no_match_url/Nomatch';
+import AddEmployeeForm from './components/add_employee_form/AddEmployee';
+import EmployeeSummary from './components/employee_summary/EmployeeSummary';
+import Technews from './components/tech_news/Technews';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavbarHeader />
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='about' element={<About />}></Route>
+        <Route path='news' element={<Technews />}></Route>
+        <Route path='*' element={<nomatch />}></Route>
+
+
+      </Routes>
     </div>
   );
 }
