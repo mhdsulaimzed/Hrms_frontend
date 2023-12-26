@@ -23,7 +23,7 @@ function App() {
         <Route path='employee/add' element={<AddEmployeeForm />}></Route>
         <Route path='employee/:id' element={<EmployeeSummary />}></Route>
         <Route path='news' element={<Technews />}></Route>
-        <Route path='*' element={<nomatch />}></Route>
+        <Route path='*' element={<Nomatch />}></Route>
 
 
       </Routes>
