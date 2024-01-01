@@ -13,9 +13,9 @@ function Employees() {
       const jsonData = await response.json();
 
 
-      const usersArray = jsonData.users || [];
+      const employeeArray = jsonData.users || [];
 
-      setEmployees(usersArray);
+      setEmployees(employeeArray);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
